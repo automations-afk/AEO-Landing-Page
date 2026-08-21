@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-W9RWM38V');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Book a free 30-min session | Y77</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F6F7F4;--surface:#fff;--ink:#101418;--ink2:#3A424C;--muted:#79828D;--line:#E7E9E4;
+  --accent:#C8F135;--accent-ink:#101418;--primary:#101418;
+  --good:#1FA463;--mid:#E8A12B;--bad:#E0533D;--olive:#5b7e00;
+  --display:'Space Grotesk',sans-serif;--body:'Inter',sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--body);background:var(--bg);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased; display:flex; flex-direction:column; min-height:100vh;}
+header{position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:14px 28px;background:rgba(246,247,244,.85);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.logo{display:flex;align-items:center;gap:8px;font-family:var(--display);font-weight:700;font-size:19px;color:var(--ink);text-decoration:none}
+.logo img{height:24px}.logo .mark b{color:var(--olive)}
+.head-link{font-family:var(--display);font-weight:600;font-size:13px;color:var(--ink2);text-decoration:none}
+.head-link:hover{color:var(--ink)}
+.container { flex: 1; padding: 40px 24px; max-width: 1000px; margin: 0 auto; width: 100%; }
+</style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W9RWM38V"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<header>
+  <a class="logo" href="/"><img src="https://www.y77.ai/images/logo.png" alt="Y77" onerror="this.remove()"></a>
+  <a class="head-link" href="/">← Back to Audit</a>
+</header>
+
+<div class="container">
+  <!-- Calendly inline widget begin -->
+  <div class="calendly-inline-widget" data-url="https://calendly.com/ara-y77/30min" style="min-width:320px;height:700px;"></div>
+  <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+  <!-- Calendly inline widget end -->
+  
+  <!-- Listen for Calendly Events and push to Google Tag Manager -->
+  <script>
+    window.addEventListener(
+      'message',
+      function(e) {
+        if (e.origin !== "https://calendly.com") return;
+        if (e.data.event && e.data.event.indexOf('calendly') === 0) {
+          window.dataLayer = window.dataLayer || [];
+          window.dataLayer.push({
+            'event': e.data.event,
+            'calendly_payload': e.data.payload
+          });
+        }
+      }
+    );
+  </script>
+</div>
+
+</body>
+</html>
