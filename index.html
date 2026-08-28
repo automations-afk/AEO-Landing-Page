@@ -115,9 +115,9 @@ header{position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-
 .gate{padding:40px 24px 80px;max-width:720px;margin:0 auto;text-align:center}
 .gate .done-tag{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:600;color:var(--good);background:#e7f6ee;border:1px solid #c4e8d4;padding:7px 15px;border-radius:100px}
 .gate h2{font-size:29px;margin-bottom:10px}.gate p.sub{font-size:15.5px;color:var(--ink2)}
-.partial-report{position:relative;margin:10px auto 0;pointer-events:none;user-select:none;max-height:680px;overflow:hidden;padding:0 12px}
-.partial-fade{position:absolute;bottom:0;left:0;right:0;height:240px;background:linear-gradient(to bottom,rgba(246,247,244,0) 0%,rgba(246,247,244,1) 90%);z-index:2}
-.gate-lock{position:relative;z-index:3;margin-top:-140px;background:var(--surface);border:1px solid var(--line);box-shadow:var(--shadow);border-radius:16px;padding:32px;max-width:480px;margin-left:auto;margin-right:auto}
+.partial-report{position:relative;margin:10px auto 0;padding:0 12px}
+.partial-fade{display:none}
+.gate-lock{position:relative;z-index:3;margin-top:32px;background:var(--surface);border:1px solid var(--line);box-shadow:var(--shadow);border-radius:16px;padding:32px;max-width:480px;margin-left:auto;margin-right:auto}
 .gate-form{display:flex;flex-direction:column;gap:10px;margin:0 auto}
 .gate-form input{border:1px solid var(--line);border-radius:11px;padding:14px 15px;font-family:var(--body);font-size:15.5px;outline:none}
 .gate-form input:focus{border-color:var(--olive)}
@@ -186,7 +186,7 @@ header{position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-
 .story-metrics .v.ph{font-size:13px;color:var(--muted);border:1px dashed #cfd4c8;border-radius:8px;padding:6px 10px;font-family:var(--mono);font-weight:500}
 .pc .v.ph{font-size:12.5px;color:var(--muted);border:1px dashed #cfd4c8;border-radius:8px;padding:5px 9px;font-family:var(--mono);font-weight:500;display:inline-block}
 .story-metrics .d{font-size:11.5px;color:var(--muted);margin-top:6px}
-.expert-band{display:flex;align-items:center;gap:18px;background:#101418;color:#fff;border-radius:16px;padding:22px 24px;margin-top:16px;text-align:left}
+.expert-band{display:flex;align-items:center;justify-content:center;gap:18px;background:#101418;color:#fff;border-radius:16px;padding:22px 24px;margin-top:16px;text-align:center}
 .expert-band h4{font-family:var(--display);font-size:17px;margin-bottom:5px}
 .expert-band p{font-size:13.5px;color:rgba(255,255,255,.72);line-height:1.55}
 @media (max-width:640px){.expert-band{flex-direction:column;text-align:center}}
@@ -237,11 +237,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="lbl">TRUSTED BY MARKETING TEAMS AT</div>
     <div class="proof-logos">
       <div class="proof-card">
-        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><rect width="24" height="24" rx="4" fill="#9C3322"/><path d="M16 8.5c-1.5-1.5-4.5-1.5-6 0-1.5 1.5-1.5 4.5 0 6 1.5 1.5 4.5 1.5 6 0v-2.5c-1 1-2.5 1-3.5 0-1-1-1-2.5 0-3.5 1-1 2.5-1 3.5 0V8.5z" fill="#fff"/></svg>
+        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path d="M 75 25 A 35 35 0 0 0 25 75" fill="none" stroke="#9a2f1c" stroke-width="20" stroke-linecap="round"/><path d="M 25 75 A 35 35 0 0 0 85 65" fill="none" stroke="#ef6c31" stroke-width="20" stroke-linecap="round"/></svg>
         Carrum Health
       </div>
       <div class="proof-card">
-        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><rect width="24" height="24" rx="4" fill="#0B203E"/><text x="12" y="15" fill="#fff" font-family="sans-serif" font-size="8.5" font-weight="bold" text-anchor="middle">NYSC</text></svg>
+        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><rect width="100" height="100" fill="#ff0013"/><text x="50" y="70" fill="#fff" font-family="'Impact', 'Arial Black', sans-serif" font-size="45" textLength="80" lengthAdjust="spacingAndGlyphs" text-anchor="middle">NYSC</text></svg>
         New York Sports Clubs
       </div>
     </div>
@@ -249,7 +249,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <!-- EXPERT-LED BAND (technology + human expert) -->
     <div class="expert-band">
-      <div class="face" style="background:var(--accent);color:#101418;border-color:#2a323d;width:62px;height:62px;font-size:24px"><img src="headshot.jpeg" alt="" onerror="this.remove()">A</div>
+
       <div>
         <h4>Our technology finds the gaps. Our experts close them.</h4>
         <p>The audit uses technology to check every major AI platform for where your brand is missing. Then a real Y77 search expert turns those gaps into a fix plan and walks you through it. You're never left to decode a report alone.</p>
@@ -320,7 +320,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="verdict" id="gateVerdict"></div>
       </div>
       <div class="panel" style="text-align:left;"><h3>How AI engines see your site</h3><div id="gatePillars"></div></div>
-      <div class="partial-fade"></div>
     </div>
     <div class="gate-lock">
       <div class="done-tag" style="margin-bottom:12px;">✓ Audit complete for <span id="gateDomain" style="margin-left:4px"></span></div>
